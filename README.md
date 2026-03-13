@@ -17,6 +17,9 @@ A Retrieval-Augmented Generation (RAG) based AI assistant that allows users to q
 - Ask questions about company policies
 - Chatbot interface built with React
 
+## Architecture
+SharePoint → Azure Storage → Document Ingestion → FAISS Vector Index → RAG Engine → React Chatbot UI
+
 ## Project Structure
 
 backend.py – API backend  
