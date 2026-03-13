@@ -1,0 +1,190 @@
+/*
+Infocreon Policy Assistant - Chatbot UI Styles
+
+This CSS file defines the styling for the chatbot interface used in the
+Infocreon Policy Assistant application.
+
+Responsibilities:
+* Layout of the chatbot interface
+* Background styling with blur overlay
+* Chat message bubble design
+* Header and upload button styling
+* Input field and send button styling
+
+The goal is to provide a clean and user-friendly interface for interacting
+with the AI policy assistant.
+*/
+/* BODY */
+/* Base styling for the webpage */
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+/* MAIN APP */
+/* Main application container with background image */
+.app{
+height:100vh;
+background-image:url("./assets/brochure-bg-1.png");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+position:relative;
+}
+
+/* DARK BLUE BLUR OVERLAY */
+/* Dark blue blur overlay for better readability of chat content */
+.app::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+
+background:rgba(10,35,80,0.55);
+backdrop-filter:blur(6px);
+
+z-index:0;
+}
+
+/* HEADER */
+/* Header section containing company logo and upload button */
+.header{
+height:60px;
+background:white;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 20px;
+z-index:2;
+}
+
+/* Align logo and title horizontally */
+.header-left{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+/* Company logo size */
+.header-left img{
+width:35px;
+}
+
+/* UPLOAD BUTTON */
+/* Upload PDF button styling */
+.upload-btn{
+background:#2b78ff;
+color:white;
+border:none;
+padding:8px 16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* CHAT AREA */
+/* Scrollable chat area where messages appear */
+.chat-area{
+flex:1;
+overflow-y:auto;
+padding:40px 120px;
+position:relative;
+z-index:2;
+}
+
+/* MESSAGE ROW */
+/* Message row container for each chat message */
+.message-row{
+display:flex;
+margin-bottom:20px;
+}
+/* Align user messages to the right side */
+.message-row.user{
+justify-content:flex-end;
+}
+
+/* Align chatbot responses to the left side */
+.message-row.bot{
+justify-content:flex-start;
+}
+
+/* MESSAGE BUBBLES */
+/* Base styling for chat message bubbles */
+.message-bubble{
+max-width:550px;
+padding:14px 18px;
+border-radius:14px;
+font-size:15px;
+line-height:1.5;
+}
+
+/* USER MESSAGE */
+/* Styling for user message bubble */
+.message-bubble.user{
+background:#f5a623;
+color:white;
+}
+
+/* BOT MESSAGE */
+/* Styling for chatbot response bubble */
+.message-bubble.bot{
+background:rgba(255,255,255,0.95);
+color:#333;
+box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+.bot-message {
+  white-space: pre-line;
+}
+
+/* SOURCE TEXT */
+
+.confidence{
+font-size:12px;
+margin-top:6px;
+color:#666;
+}
+
+/* INPUT BAR */
+/* Chat input area at the bottom of the screen */
+.input-bar{
+padding:20px;
+display:flex;
+justify-content:center;
+background:transparent;
+z-index:2;
+}
+
+/* INPUT FIELD */
+/* Text input field where users type their questions */
+.input-bar input{
+
+width:600px;
+padding:14px 20px;
+border-radius:30px;
+border:none;
+outline:none;
+font-size:14px;
+
+background:rgba(255,255,255,0.9);
+
+box-shadow:0 6px 18px rgba(0,0,0,0.2);
+
+}
+
+/* SEND BUTTON */
+/* Send button for submitting user questions */
+.input-bar button{
+
+margin-left:-50px;
+background:#1f2b45;
+color:white;
+border:none;
+width:40px;
+height:40px;
+border-radius:50%;
+cursor:pointer;
+
+}
